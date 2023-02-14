@@ -23,17 +23,17 @@ ModpackNames = ["Legend of the Eyes", "Better MC", "Encrpted", "Sky Vault Hunter
 "GT New Horizons", "TerraFirmaPunk", "Regrowth"]
 
 # 19 Modpacks
-RandomPacks = random.sample(ModpackNames, 3)
-String =" &7&l&e ".join(map(str,RandomPacks))
-ModpackNames3 = " &7&l&e " + String
+def CreateModpackNames():
+    RandomPacks = random.sample(ModpackNames, 3)
+    String =" &7&l&e ".join(map(str,RandomPacks))
+    return " &7&l&e " + String
 
 
 # Creating here a .txt file where the motd code is inside
 
-
 File = open('C:\MotdList\ 'f"{Modpackname}\custommotdlist.txt",'w+')
-File.write("\n &7&l//- &6&l" + f"{Modpackname} &r&7&l-\\| {ModpackNames3}")
-File.write("\n &7&l//- &6&l" + f"{Modpackname} &r&7&l-\\| {ModpackNames3}")
+for x in range(20):
+    File.write("\n &7&l//- &6&l" + f"{Modpackname} &r&7&l-\\|"+ CreateModpackNames() +str(x))
 File.close()
 
 File = open('C:\MotdList\ 'f"{Modpackname}\customplayerlist.txt",'w+')
@@ -48,4 +48,3 @@ File.write("\n &l&oPlayers Online: {playercount}/{maxplayers}")
 File.write("\n Difficulty: {difficulty}")
 File.write("\n &8Minecraft Version: &8&l{mcversion}")
 File.close()
-
