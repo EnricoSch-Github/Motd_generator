@@ -6,4 +6,8 @@ What it does:
 Currently it creates a Folder in C:\MotdList
 With the name of the Input, and that create a folder with the modpack name and a .txt document with motd context
 
+New:
+Create now a Customplayerlist.txt
+
+
 How to enhance this: change the directory where the server has the motd context inside
