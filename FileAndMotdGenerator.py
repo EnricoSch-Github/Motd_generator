@@ -33,7 +33,7 @@ def CreateModpackNames():
 
 File = open('C:\MotdList\ 'f"{Modpackname}\custommotdlist.txt",'w+')
 for x in range(20):
-    File.write("\n &7&l//- &6&l" + f"{Modpackname} &r&7&l-\\|"+ CreateModpackNames() +str(x))
+    File.write("\n &7&l//- &6&l" + f"{Modpackname} &r&7&l-\\|"+ CreateModpackNames())
 File.close()
 
 File = open('C:\MotdList\ 'f"{Modpackname}\customplayerlist.txt",'w+')
